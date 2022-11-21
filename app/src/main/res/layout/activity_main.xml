@@ -6,15 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/dial_button"
-        android:layout_width="88dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="112dp"
-        android:text="DIAL"
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/dial_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="DIAL"
+            app:icon="@android:drawable/stat_sys_phone_call" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="messages" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="fast calls" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="ready messages" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="func 5" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:text="sos" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
