@@ -22,7 +22,9 @@
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
             android:text="DIAL"
-            app:icon="@android:drawable/stat_sys_phone_call" />
+            app:icon="@android:drawable/stat_sys_phone_call"
+            app:iconGravity="textTop"
+            app:iconSize="60dp" />
 
         <Button
             android:id="@+id/btn2"
@@ -50,7 +52,10 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
-            android:text="fast calls" />
+            android:text="fast calls"
+            app:icon="@android:drawable/stat_sys_phone_call_forward"
+            app:iconGravity="textTop"
+            app:iconSize="60dp" />
 
         <Button
             android:id="@+id/btn4"
