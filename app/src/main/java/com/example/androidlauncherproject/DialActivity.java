@@ -37,13 +37,16 @@ public class DialActivity extends AppCompatActivity {
 
     public void deleteChar(View view) {
         if(phoneNumber.getText().toString().trim().length() > 0){
-        StringBuilder stringBuilder = new StringBuilder(phoneNumber.getText());
-        stringBuilder.deleteCharAt(phoneNumber.getText().length()-1);
-        String currNum = stringBuilder.toString();
-        phoneNumber.setText(currNum);
+            StringBuilder stringBuilder = new StringBuilder(phoneNumber.getText());
+            stringBuilder.deleteCharAt(phoneNumber.getText().length()-1);
+            String currNum = stringBuilder.toString();
+            phoneNumber.setText(currNum);
         }else {
             Toast.makeText(this, "Nothing to Delete", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void makeCAll(View view) {
     }
 }

@@ -34,7 +34,7 @@
             android:backgroundTint="@android:color/holo_red_dark"
             android:onClick="deleteChar"
             android:textSize="50sp"
-            app:icon="@android:drawable/ic_delete"
+            app:icon="@android:drawable/ic_input_delete"
             app:iconSize="50dp"
             app:iconTint="#FFFFFF" />
 
@@ -56,7 +56,6 @@
             android:id="@+id/btn1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
             android:onClick="clicktest"
             android:text="1"
             android:textSize="60sp" />
@@ -65,7 +64,7 @@
             android:id="@+id/btn2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginHorizontal="15dp"
             android:onClick="clicktest"
             android:text="2"
             android:textSize="60sp" />
@@ -95,7 +94,6 @@
             android:id="@+id/btn5"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
             android:onClick="clicktest"
             android:text="4"
             android:textSize="60sp" />
@@ -104,7 +102,7 @@
             android:id="@+id/btn6"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginHorizontal="15dp"
             android:onClick="clicktest"
             android:text="5"
             android:textSize="60sp" />
@@ -133,7 +131,6 @@
             android:id="@+id/btn11"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
             android:onClick="clicktest"
             android:text="7"
             android:textSize="60sp" />
@@ -142,7 +139,7 @@
             android:id="@+id/btn12"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginHorizontal="15dp"
             android:onClick="clicktest"
             android:text="8"
             android:textSize="60sp" />
@@ -171,7 +168,6 @@
             android:id="@+id/btn8"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
             android:onClick="clicktest"
             android:text="*"
             android:textSize="60sp" />
@@ -180,7 +176,7 @@
             android:id="@+id/btn9"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginHorizontal="15dp"
             android:onClick="clicktest"
             android:text="0"
             android:textSize="60sp" />
@@ -208,7 +204,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@android:color/holo_green_dark"
-            android:text="CALL" />
+            android:text="CALL"
+            android:onClick="makeCAll"/>
     </LinearLayout>
 
 
