@@ -64,10 +64,17 @@ public class DialActivity extends AppCompatActivity {
 
     public void makeCAll(View view) {
         Log.i("Dial Activity", "Call BTN Pressed");
-        String phoneNum = phoneNumber.getText().toString().trim();
-        Intent i = new Intent(Intent.ACTION_CALL);
-        i.setData(Uri.parse("tel:" + phoneNum));
-        startActivity(i);
+        try {
+            String phoneNum = phoneNumber.getText().toString().trim();
+            Intent i = new Intent(Intent.ACTION_CALL);
+            i.setData(Uri.parse("tel:" + phoneNum));
+            startActivity(i);
+        } catch (Exception e) {
+            Log.e("Dial Activity" , "Call error ");
+            e.printStackTrace();
+        }finally {
+            Log.i("Dial Activity" , "Call Success");
+        }
 
     }
 

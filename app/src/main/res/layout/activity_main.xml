@@ -82,6 +82,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
+
             android:text="func 5" />
 
         <Button
