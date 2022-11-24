@@ -210,7 +210,10 @@
             android:layout_height="match_parent"
             android:backgroundTint="@android:color/holo_green_dark"
             android:onClick="makeCAll"
-            android:text="CALL" />
+            android:text="CALL"
+            app:icon="@drawable/telephone_add_call_wf_100"
+            app:iconGravity="textStart"
+            app:iconSize="50dp" />
     </LinearLayout>
 
 

@@ -24,14 +24,17 @@
             android:text="DIAL"
             app:icon="@android:drawable/stat_sys_phone_call"
             app:iconGravity="textTop"
-            app:iconSize="60dp" />
+            app:iconSize="80dp" />
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
-            android:text="messages" />
+            android:text="messages"
+            app:icon="@drawable/mail_01_100"
+            app:iconGravity="textTop"
+            app:iconSize="80dp" />
 
     </LinearLayout>
 
@@ -62,7 +65,10 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
-            android:text="ready messages" />
+            android:text="ready messages"
+            app:icon="@drawable/letter_open_100"
+            app:iconGravity="textTop"
+            app:iconSize="80dp" />
 
     </LinearLayout>
 
@@ -83,14 +89,21 @@
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
 
-            android:text="func 5" />
+            android:text="func 5"
+            app:icon="@drawable/user_group_100"
+            app:iconGravity="textTop"
+            app:iconSize="100dp" />
 
         <Button
             android:id="@+id/btn6"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginRight="20dp"
-            android:text="sos" />
+            android:text="sos"
+            app:icon="@drawable/warning_message_100"
+            app:iconGravity="textTop"
+            app:iconSize="100dp"
+            app:iconTint="#F40000" />
 
     </LinearLayout>
 
