@@ -42,6 +42,7 @@ public class DialActivity extends AppCompatActivity {
             String currNum = phoneNumber.getText().toString().trim();
             String pressNum = currBTN.getText().toString().trim();
             currNum = currNum + pressNum;
+            //replace # * to call
             phoneNumber.setText(currNum);
             Log.i("Dial Activity","Number Pressed: "+ pressNum + " Phone Number: " + currNum);
         }else {
