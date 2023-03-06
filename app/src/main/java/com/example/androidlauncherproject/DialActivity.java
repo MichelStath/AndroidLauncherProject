@@ -37,18 +37,13 @@ public class DialActivity extends AppCompatActivity {
     }
 
     public void clicktest(View view) {
-        if(phoneNumber.getText().toString().length()<10) {
-            Button currBTN = (Button) view;
-            String currNum = phoneNumber.getText().toString().trim();
-            String pressNum = currBTN.getText().toString().trim();
-            currNum = currNum + pressNum;
-            //replace # * to call
-            phoneNumber.setText(currNum);
-            Log.i("Dial Activity","Number Pressed: "+ pressNum + " Phone Number: " + currNum);
-        }else {
-            Toast.makeText(this, "Exta Digit Pressed !", Toast.LENGTH_SHORT).show();
-            Log.i("Dial Activity","Extra Number Preesed.");
-        }
+        Button currBTN = (Button) view;
+        String currNum = phoneNumber.getText().toString().trim();
+        String pressNum = currBTN.getText().toString().trim();
+        currNum = currNum + pressNum;
+        //replace # * to call
+        phoneNumber.setText(currNum);
+        Log.i("Dial Activity","Number Pressed: "+ pressNum + " Phone Number: " + currNum);
     }
 
     public void deleteChar(View view) {
@@ -60,7 +55,6 @@ public class DialActivity extends AppCompatActivity {
         }else {
             Toast.makeText(this, "Nothing to Delete", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public void makeCAll(View view) {
@@ -76,7 +70,6 @@ public class DialActivity extends AppCompatActivity {
         }finally {
             Log.i("Dial Activity" , "Call Success");
         }
-
     }
 
     @Override
