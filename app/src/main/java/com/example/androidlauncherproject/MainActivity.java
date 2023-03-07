@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setProgress((int) changeInAcceleration);
             Log.i("Accel change " ,"" + changeInAcceleration);
 
-            if(changeInAcceleration > 10){
+            if(changeInAcceleration > 9){
+                mSensorManager.unregisterListener(sensorEventListener); //unRegister Accelerator listener
                 //Drop detection
                 Log.i("Accel listener " ,"Listener removed");
                 Log.i("Accel change " ,"" + changeInAcceleration);
@@ -102,9 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void phoneDroped() {
         //works must find sensitivity
-        mSensorManager.unregisterListener(sensorEventListener); //unRegister Accelerator listener
-        playAlertSound(R.raw.verifyok); //Alert sound start
 
+        playAlertSound(R.raw.verifyok); //Alert sound start
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -115,15 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 sendAlertMessage();
                 stopAlertSound();   //close alert sound
                 mSensorManager.registerListener(sensorEventListener,mAccelerometer,SensorManager.SENSOR_DELAY_NORMAL);  //Register Accelerator listener
-
             }
-        },5000);
+        },10000);
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
         builder1.setTitle("Phone Droped");
         builder1.setMessage("Are you ok ?");
         builder1.setCancelable(true);
-
         builder1.setPositiveButton(
                 "Yes",
                 new DialogInterface.OnClickListener() {
@@ -148,8 +146,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void stopAlertSound() {
-        mediaPlayer.stop();
-        mediaPlayer.release();
+        if(mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
+
     }
 
     private void playAlertSound(int song) {
